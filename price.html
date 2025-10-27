@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Godgreat Printx</title>
+    <link rel="stylesheet" href="price.css">
+</head>
+<body>
+    <div class="hero">
+        <header>
+            <h1>Welcome to Godgreat Printx</h1>
+            
+       </header>
+
+       <div class="main-board">
+
+        <div class="board-left">
+
+            <div class="user-field">
+                <input type="number" name="" id="num1" placeholder="height eg 36" required>
+                <input type="number" name="" id="num2" placeholder="width eg. 48">
+                <input type="number" name="" id="quantity-el" placeholder="Quantity 1,2">
+            </div>
+
+            <div class="radio">
+                <label for="sticker_Radio"> Sticker
+                    <input type="radio" name="material" class="boxes" id="sticker_Radio" checked>
+                </label>
+                <label for="banner_Radio"> Banner
+                    <input type="radio" name="material" class="boxes" id="banner_Radio">
+                </label>
+                <label for="OneWay_Radio"> One-Way Vision
+                    <input type="radio" name="material" class="boxes" id="OneWay_Radio">
+                </label>
+            </div>
+
+            <div class="client_type">
+                <label for="agent"> Agent <input type="radio" id="agent" name="client"></label>
+                <label for="normal"> Normal <input type="radio" id="normal" name="client"></label>
+            </div>
+
+            <button class="cal-but" onclick="sumTotal()">Calculate</button>
+        </div>
+        <div class="board-right">
+            <div class="displaybox">
+                <div class="headings">
+                    <p>Total Cost is</p>
+                    <h1 id="TotalDisplay">¢0.00</h1>
+                </div>
+
+                <div class="sizes">
+                    <div class="size-left">
+                        <p>Height</p>
+                        <span>36</span>
+                    </div>
+                    <div class="size-right">
+                        <p>Weight</p>
+                        <span>48</span>
+                    </div>
+                </div>
+            </div>
+            <div class="buttonsEl">
+                <button class="clear-but">Clear</button>
+                <p>Total cost is: <h1>0.00</h1></p>
+                
+            </div>
+        </div>
+       </div>
+       
+    </div>
+
+    <script src="price.js"></script>
+</body>
+</html>
