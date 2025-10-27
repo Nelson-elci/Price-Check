@@ -7,12 +7,20 @@ function sumTotal(){
     const getBoxTwoValue = document.getElementById("num2").value;
     const getQtyyValue = document.getElementById("quantity-el").value;
     const displayAnswer = document.getElementById("TotalDisplay");
+    const sizeDisplayHeight = document.getElementById("height-display");
+    const sizeDisplayWeight = document.getElementById("weight-display");
+
+    sizeDisplayHeight.textContent = getBoxOneValue;
+    sizeDisplayWeight.textContent = getBoxTwoValue;
 
     /*checking empty inputs*/
     if (!getBoxOneValue || !getBoxTwoValue || !getQtyyValue){
         alert ("Please fill in the fields before calculation")
     }
-
+    if (getQtyyValue < 1){
+        alert ("Quantity must be at least 1")
+        return
+    }
    
     /*setting discoount for agent*/
     const clientType = document.getElementById("agent");
@@ -25,7 +33,7 @@ function sumTotal(){
     }
 
 
-
+    /*calculating final price*/
     const sum = Number(getBoxOneValue) * Number(getBoxTwoValue) / 144 * Number(price) * Number(getQtyyValue);
     const finalPrice = sum - (sum * discount);
     const roundedSum = Number(finalPrice.toFixed(2))

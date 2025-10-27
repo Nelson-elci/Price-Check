@@ -37,7 +37,7 @@
 
             <div class="client_type">
                 <label for="agent"> Agent <input type="radio" id="agent" name="client"></label>
-                <label for="normal"> Normal <input type="radio" id="normal" name="client"></label>
+                <label for="normal"> Normal <input type="radio" id="normal" name="client" checked></label>
             </div>
 
             <button class="cal-but" onclick="sumTotal()">Calculate</button>
@@ -52,11 +52,11 @@
                 <div class="sizes">
                     <div class="size-left">
                         <p>Height</p>
-                        <span>36</span>
+                        <span id="height-display">0</span>
                     </div>
                     <div class="size-right">
                         <p>Weight</p>
-                        <span>48</span>
+                        <span id="weight-display">0</span>
                     </div>
                 </div>
             </div>
