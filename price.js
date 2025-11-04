@@ -37,7 +37,10 @@ function sumTotal(){
     const sum = Number(getBoxOneValue) * Number(getBoxTwoValue) / 144 * Number(price) * Number(getQtyyValue);
     const finalPrice = sum - (sum * discount);
     const roundedSum = Number(finalPrice.toFixed(2))
-    displayAnswer.textContent = roundedSum;
+    displayAnswer.textContent = roundedSum.toLocaleString("en-US", {
+        minimumFractionDigits: 2,
+        maximumFractionDigits: 2,
+    })
 }
 
 function materialChecker(){
